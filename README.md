@@ -1,5 +1,5 @@
-# public_private_vpc_aws
-CFT for VPC with public and private subnets for AWS
+# VPC with public and private subnets
+aws cloud formation template
 
 ### Architecture
 
