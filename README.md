@@ -6,7 +6,10 @@ aws cloud formation template
 ### Create stack from aws-cli
 
 ```
-    aws cloudformation create-stack --stack-name PublicPrivateVPC --template-body file://public_private_vpc.yaml --parameters file://parameters.json
+    aws cloudformation create-stack \
+        --stack-name PublicPrivateVPC \ 
+        --template-body file://public_private_vpc.yaml \
+        --parameters file://parameters.json
 ```
 
 ### Delete stack from aws-cli
