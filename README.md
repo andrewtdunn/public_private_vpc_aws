@@ -7,7 +7,7 @@ Adapted from AWS Partner: SAP on AWS Skillbuilder
 This design pattern is used to create a network environment that has the ability to communicate with both internal (privately routed) and external (publicly routed) resources using a combination of both public and private connections. This design is ideal for SAP workloads that need to accomodate a combination of both public and private routing needs, such as all-in internet-facing, multi-tier web applications supported by databases or other privately routed backend systems. 
 
 <ul>
-    <li><h3>Public Subent</h3>An SAProuter, along with a NAT gateway or NAT instance, are placed in this subnet.<br><br>
+    <li><h3>Public Subnet</h3>An SAProuter, along with a NAT gateway or NAT instance, are placed in this subnet.<br><br>
     Only the specified public IPs from SAP are allowed to be connected to the SAProuter.
     </li>
     <br>
