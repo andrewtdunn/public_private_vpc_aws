@@ -28,3 +28,21 @@ This design pattern is used to create a network environment that has the ability
 ```
     aws cloudformation delete-stack --stack-name PublicPrivateVPC 
 ```
+<hr/>
+
+## Networking
+
+1. VPC
+    ```
+    EnableDnsSupport: true
+    EnableDnsHostnames: true
+    ```
+1. Public Subnet
+    ```
+    MapPublicIpOnLaunch: true
+    ```
+1. Internet Gateway
+    - Attached to the VPC via IG attachment
+1. Public Route Table
+    - Associated with the public Subnet
+    - Default public route to the Internet Gateway
