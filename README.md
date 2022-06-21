@@ -53,3 +53,8 @@ This design pattern is used to create a network environment that has the ability
     ```
 1. NAT Gateway
     - Associated  Elastic IP
+1. Private Route Table
+    - Associated with the private subnet
+    - Default private route to the NAT Gateway
+1. No Ingress Security Group
+    - Security Group with No Ingress Rule
