@@ -51,3 +51,5 @@ This design pattern is used to create a network environment that has the ability
     ```
     MapPublicIpOnLaunch: false
     ```
+1. NAT Gateway
+    - Associated  Elastic IP
