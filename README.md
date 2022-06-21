@@ -46,3 +46,7 @@ This design pattern is used to create a network environment that has the ability
 1. Public Route Table
     - Associated with the public subnet
     - Default public route to the Internet Gateway
+1. Private Subnet
+    ```
+    MapPublicIpOnLaunch: false
+    ```

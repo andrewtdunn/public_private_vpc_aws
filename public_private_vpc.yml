@@ -19,7 +19,7 @@ Parameters:
   PrivateSubnet1CIDR: 
       Description: Please enter the IP range (CIDR notation) for the private subnet in the first Availability Zone
       Type: String
-      Default: 10.192.20.0/14
+      Default: 10.192.20.0/24
 
   PrivateSubnet2CIDR:
       Description: Please enter the IP range (CIDR notation) for the private subnet in the second Availablity Zone
@@ -77,6 +77,18 @@ Resources:
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref InternetGateway
 
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      AvailabilityZone: !Select [0, !GetAZs '']
+      CidrBlock: !Ref PrivateSubnet1CIDR
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub ${EnvironmentName} Private Subnet (AZ1)
+       
+
 Outputs:
   VPC:
     Description: A reference to the created VPC
@@ -89,3 +101,4 @@ Outputs:
   PublicSubnet1:
     Description: A reference to the public subnet in the 1st Availability Zone
     Value: !Ref PublicSubnet1
+  
