@@ -47,6 +47,7 @@ This design pattern is used to create a network environment that has the ability
     - Associated with the public subnet
     - Default public route to the Internet Gateway
 1. Private Subnets
+    - located in  AZ1 and AZ2
     ```
     MapPublicIpOnLaunch: false
     ```
