@@ -19,7 +19,7 @@ This design pattern is used to create a network environment that has the ability
 ```
     aws cloudformation create-stack \
         --stack-name PublicPrivateVPC \ 
-        --template-body file://public_private_vpc.yaml \
+        --template-body file://public_private_vpc.yml \
         --parameters file://parameters.json
 ```
 
